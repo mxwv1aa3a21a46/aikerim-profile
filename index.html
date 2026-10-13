@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+
+<html lang=“kk”>
+<head>
+    <meta charset=“UTF-8”>
+    <meta name=“viewport” content=“width=device-width, initial-scale=1.0”>
+    <title>Айкерим Мухашова | Мен туралы</title>
+
+<style>
+    body {
+        background-color: #350909;
+        color: white;
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        padding: 40px 20px;
+        background-color: #4d1010;
+    }
+    h1 {
+        color: #ffb6c1;
+        font-size: 36px;
+    }
+    h2 {
+        color: #ffb6c1;
+    }
+    section {
+        background-color: #521b1b;
+        margin: 25px auto;
+        padding: 25px;
+        width: 80%;
+        max-width: 600px;
+        border-radius: 15px;
+    }
+    img {
+        width: 180px;
+        height: 180px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid pink;
+    }
+    input[type="file"] {
+        display: block;
+        margin: 20px auto;
+        padding: 10px;
+        color: white;
+        background-color: #6b2525;
+        border: 1px solid pink;
+        border-radius: 8px;
+    }
+    p {
+        font-size: 17px;
+        line-height: 1.7;
+    }
+    footer {
+        padding: 20px;
+        color: pink;
+    }
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Mukhasova Aikerim 🌷</h1>
+    <p>Менің вебсайтым^^</p>
+</header>
+<section>
+    <h2>Мен туралы</h2>
+    <img id="profilePhoto"
+         src="https://placehold.co/300x300/521b1b/ffffff?text=My+Photo"
+         alt="Менің суретім">
+    <input type="file" id="photoInput" accept="image/*">
+    <p>Менің атым — Айкерим Мухашова.</p>
+    <p>Мен Алматы Экономикалық, Құқықтық және Педагогикалық колледжінде оқимын.</p>
+    <p>Менің мамандығым — IT.</p>
+</section>
+<section>
+    <h2>Менің қызығушылықтарым 💗</h2>
+    <p>📚 Кітап оқу</p>
+    <p>🎬 Фильмдер мен аниме көру</p>
+    <p>🧶 Тоқыма тоқу</p>
+    <p>🏹 Садақ ату</p>
+</section>
+<section>
+    <h2>Менің мақсаттарым ✨</h2>
+    <p>Жаңа білім үйрену, өзімді дамыту және болашақта жақсы маман болу.</p>
+</section>
+<footer>
+    <p>© 2026 | mxwv.a🌸</p>
+</footer>
+<script>
+    const photoInput = document.getElementById("photoInput");
+    const profilePhoto = document.getElementById("profilePhoto");
+    photoInput.addEventListener("change", function () {
+        const file = this.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (event) {
+                profilePhoto.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
+
+</body>
+</html>
